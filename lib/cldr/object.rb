@@ -9,7 +9,7 @@
   $Id: object.rb,v 1.1.1.1 2006/03/21 07:14:13 mutoh Exp $
 =end
 
-require 'gettext/locale'
+require 'locale'
 require 'cldr/utils'
 require 'cldr/resource'
 
