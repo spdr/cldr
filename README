@@ -1,0 +1,67 @@
+= Ruby/CLDR
+Ruby/CLDR is a library provides locale informations based 
+on CLDR-1.3.0 from Common Locale Data Repository(CLDR) Project[1].
+This is a fork of http://www.yotabanana.com/ruby-cldr/, which seems to be inactive.
+
+[1] http://www.unicode.org/cldr/
+
+* formatting [not yet]
+  numbers, dates, times, currency values
+* parsing [not yet]
+  numbers, dates, times, currency values
+* display names [almost done]
+  language, script, region, currency, time-zones, ...
+* collation order [won't support?]
+  used in sorting, searching, and matching text 
+* identifying usage [almost done]
+  measurement systems, weekend conventions, currencies, ...
+
+
+== Requirements
+* Ruby 1.8.4
+* Ruby-GetText-Package 1.3.0 or later
+
+== Install
+
+ $ gem install spdr-cldr
+
+== Usage
+This libarary is unstable now. APIs will be changed.
+So using gem and specify the version should be recommanded.
+
+ require 'rubygems'
+ require_gem 'cldr', '= 0.1.0'
+ 
+ obj = CLDR::Object.new
+ puts obj.core.languages["ja"] #=> Show "Japanese" in current system locale
+ 
+ obj = CLDR::Object.new(Locale::Object.new("fr_FR"))
+ puts obj.core.languages["ja"] #=> Show "Japanese" in French(fr_FR)
+
+== Generating resources by yourself
+((*NOTE*)) Both of gem and tar-ball include resources(see lib/cldr/resource/), 
+so usually you don't need this.
+
+* Download core.zip from http://unicode.org/Public/cldr/1.3.0/
+* unzip it to cldr source directory
+* execute "rake generate"
+
+  $ cd cldr-0.x.0/
+  $ cp ~/core.zip .
+  $ unzip core.zip
+  $ rake generate
+
+== License
+=== Ruby/CLDR
+Copyright (c) 2006 Masao Mutoh
+
+This program is licenced under the same licence as Ruby. (See the file 'COPYING'.)
+
+=== CLDR
+Ruby/CLDR uses CLDR data files.
+
+Copyright (c) 1991-2005 Unicode, Inc. All rights reserved. 
+Distributed under the Terms of Use in http://www.unicode.org/copyright.html.
+
+== Maintainer
+Masao Mutoh <mutoh at highway.ne.jp>
