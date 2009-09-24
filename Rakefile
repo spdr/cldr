@@ -43,6 +43,7 @@ gem_spec = lambda do |s|
 
       [1] http://www.unicode.org/cldr/
     EOF
+    s.add_dependency('locale', ['> 2.0.0'])
 end
 
 desc "Create gem and tar.gz"
