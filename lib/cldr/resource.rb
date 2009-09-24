@@ -14,7 +14,7 @@ module CLDR
   class Resource
     def initialize(locale, fallback, textdomain) #:nodoc:
       script = ""
-      [locale.to_general, locale.to_s, locale.language, fallback.to_general].each do |v|
+      [locale.to_simple, locale.to_s, locale.language, fallback.to_simple].each do |v|
 	path = File.join(RESOURCE_DIR, v, "#{textdomain}.rb")
 	if FileTest.file?(path)
 	  File.open(path){|v| script = v.read}

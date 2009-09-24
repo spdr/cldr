@@ -26,7 +26,7 @@ module CLDR
     # * Returns: a newly created Locale::Object
     def initialize(opts = {})
       locale = opts[:locale] ? opts[:locale] : Locale.get
-      fallback = opts[:fallback] ? opts[:fallback] : Locale::Object.new("en")
+      fallback = opts[:fallback] ? opts[:fallback] : Locale::Tag::Cldr.new("en")
 
       data = @@data_cache[locale]
       unless data
