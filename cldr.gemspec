@@ -2,21 +2,21 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cldr}
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Masao Mutoh"]
-  s.date = %q{2009-10-08}
+  s.date = %q{2009-12-17}
   s.description = %q{      Ruby/CLDR a library which provides locale informations based on 
       Common Locale Data Repository(CLDR) Project[1].
 
       [1] http://www.unicode.org/cldr/
 }
   s.email = %q{mutoh at highway.ne.jp}
-  s.extra_rdoc_files = [
-    "ChangeLog",
-     "README"
-  ]
+  #s.extra_rdoc_files = [
+  #  "ChangeLog",
+  #   "README"
+  #]
   s.files = [
     "COPYING",
      "ChangeLog",
@@ -1601,6 +1601,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://www.yotabanana.com/hiki/ruby-cldr.html}
   s.rdoc_options = ["--charset=UTF-8"]
+  s.has_rdoc = false
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.4}
   s.summary = %q{Ruby/CLDR is a library which provides locale informations}

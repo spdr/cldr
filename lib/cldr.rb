@@ -9,7 +9,6 @@
   $Id: cldr.rb,v 1.1.1.1 2006/03/21 07:14:13 mutoh Exp $
 =end
 
-require 'gettext'
 require 'cldr/version'
 require 'cldr/object'
 
